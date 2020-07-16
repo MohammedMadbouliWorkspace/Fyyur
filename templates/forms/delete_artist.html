@@ -1,0 +1,21 @@
+{% extends 'layouts/main.html' %}
+{% block title %}Delete artist {{ artist.name }}{% endblock %}
+{% block content %}
+    <div class="form-wrapper">
+
+        <h3 class="form-heading">
+            Are you sure to delete artist
+            <br>
+            <em>{{ artist.name }}</em> ?
+        </h3>
+
+        <div class="form-group">
+            <button id="approveDeleteBtn" class="btn btn-danger btn-lg btn-block" data-id="{{ artist.id }}"
+                    data-type="artist">Yes
+            </button>
+            <button id="cancelDeleteBtn" class="btn btn-secondary btn-lg btn-block">No</button>
+        </div>
+
+        </form>
+    </div>
+{% endblock %}
